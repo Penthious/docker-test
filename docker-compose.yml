@@ -1,0 +1,9 @@
+version: '3.4'
+services:
+  hello-world:
+    build: 
+      target: dev
+      context: .
+    command: watchmedo auto-restart --recursive --directory="src" python ./src/hello-world.py
+    volumes:
+      - .:/opt/project
